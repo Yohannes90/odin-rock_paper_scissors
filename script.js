@@ -69,6 +69,7 @@ function game() {
     } else {
         console.log("You lost game to 5");
     }
+    console.log("Reload to play again!!");
 }
 
 game();
