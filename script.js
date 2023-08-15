@@ -1,16 +1,14 @@
-console.log("Hello, World!");
-
 function getComputerChoice() {
     let idx = Math.floor((Math.random() * 3));
     let choices = ["Rock", "Paper", "Scissors"];
+
     return choices[idx];
 }
-// test for getComputerChoice
-// console.log(getComputerChoice());
 
 function playRound(playerSelection, computerSelection) {
     let ps = playerSelection.toLowerCase();
     let cs = computerSelection.toLowerCase();
+
     if (ps == "rock") {
         if (cs == "rock") {
             return "It's a draw"
@@ -42,13 +40,10 @@ function playRound(playerSelection, computerSelection) {
         if (cs == "scissors") {
             return "It's a draw"
         }
+    } else {
+        return "Incorrect input, please try again with rock, paper, scissor"
     }
 }
-// test for playRound
-// const playerSelection = "scissors";
-// const computerSelection = getComputerChoice();
-// console.log(computerSelection);
-// console.log(playRound(playerSelection, computerSelection));
 
 function game() {
     let playerWinCount = 0;
@@ -60,13 +55,13 @@ function game() {
     while (playerWinCount < 5 && computerWinCount < 5) {
         playerSelection = prompt("Rock, paper or scissors?");
         computerSelection = getComputerChoice();
-        console.log(computerSelection);
         result = playRound(playerSelection, computerSelection)
-        console.log(result);
         if (result.includes("You win")) {
             playerWinCount++;
         } else if (result.includes("You lose")) {
             computerWinCount++;
+        } else if ("Incorrect input") {
+            console.log(result);
         }
         console.log("Player = " + playerWinCount + ", Computer = " + computerWinCount);
     }
