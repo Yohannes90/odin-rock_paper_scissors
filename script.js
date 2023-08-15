@@ -49,3 +49,32 @@ function playRound(playerSelection, computerSelection) {
 // const computerSelection = getComputerChoice();
 // console.log(computerSelection);
 // console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+    let playerWinCount = 0;
+    let computerWinCount = 0;
+    let playerSelection;
+    let computerSelection;
+    let result;
+
+    while (playerWinCount < 5 && computerWinCount < 5) {
+        playerSelection = prompt("Rock, paper or scissors?");
+        computerSelection = getComputerChoice();
+        console.log(computerSelection);
+        result = playRound(playerSelection, computerSelection)
+        console.log(result);
+        if (result.includes("You win")) {
+            playerWinCount++;
+        } else if (result.includes("You lose")) {
+            computerWinCount++;
+        }
+        console.log("Player = " + playerWinCount + ", Computer = " + computerWinCount);
+    }
+    if (playerWinCount = 5) {
+        console.log("You Won game to 5");
+    } else {
+        console.log("You lost game to 5");
+    }
+}
+
+game();
