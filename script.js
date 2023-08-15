@@ -60,9 +60,8 @@ function game() {
             playerWinCount++;
         } else if (result.includes("You lose")) {
             computerWinCount++;
-        } else if ("Incorrect input") {
-            console.log(result);
         }
+        console.log(result);
         console.log("Player = " + playerWinCount + ", Computer = " + computerWinCount);
     }
     if (playerWinCount = 5) {
