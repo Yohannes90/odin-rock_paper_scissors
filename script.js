@@ -45,6 +45,10 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+const rockBtn = document.querySelector("#rockBtn")
+const rockBtn = document.querySelector("#paperBtn")
+const scissorBtn = document.querySelector("#scissorBtn")
+
 function game() {
     let playerWinCount = 0;
     let computerWinCount = 0;
@@ -52,7 +56,7 @@ function game() {
     let computerSelection;
     let result;
 
-    while (playerWinCount < 5 && computerWinCount < 5) {
+    // while (playerWinCount < 5 && computerWinCount < 5) {
         playerSelection = prompt("Rock, paper or scissors?");
         computerSelection = getComputerChoice();
         result = playRound(playerSelection, computerSelection)
@@ -63,12 +67,12 @@ function game() {
         }
         console.log(result);
         console.log("Player = " + playerWinCount + ", Computer = " + computerWinCount);
-    }
-    if (playerWinCount == 5) {
-        console.log("You Won game to 5");
-    } else {
-        console.log("You lost game to 5");
-    }
+    // }
+    // if (playerWinCount == 5) {
+    //     console.log("You Won game to 5");
+    // } else {
+    //     console.log("You lost game to 5");
+    // }
     console.log("Reload to play again!!");
 }
 
