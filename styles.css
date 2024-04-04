@@ -34,7 +34,7 @@ h2, h3 {
     margin: 30px 0;
 }
 
-.playerSign  {
+.playerSign, .computerSign  {
     font-size: 50px;
     width: 75px;
     background-color: #CCCCCC;
